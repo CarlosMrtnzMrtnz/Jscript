@@ -151,3 +151,115 @@ console.log("alpaha".toUpperCase())
 
 console.log(text.length-1)
 console.log(text[text.length-1]);
+
+
+// let ingresoNombre = prompt("Ingresa tu nombre")
+// let ingresoApellido = prompt("Ingresa tu Apellido")
+
+// let a = `Biwnvenido ${ingresoNombre} ${ingresoApellido} a nuetra pagina`
+// console.log(a);
+//  let numO = parseInt(prompt("ingrese numero"))
+//  let numT = parseInt(prompt("ingrese numero"))
+// let result = numO + numT
+// console.log(`sumaste ${numO} con ${numT} y el resultado fue ${result}`);
+// alert(`sumaste ${numO} con ${numT} y el resultado fue ${result}`)
+
+
+// let age = prompt("ingrese su edad")
+
+
+// let sexo =""
+// if (age >= 18) {
+//         sexo = prompt("ingrese su sexo 'M' o 'F'")
+//         if (sexo == "M") {
+//             sexo = "Eres Hombre"
+//         console.log("Eres Mayor de edad y eres Hombre");
+        
+//         } else if( sexo == "F") {
+//                         sexo = "Eres Mujer"
+//         console.log("Eres Mayor de edad y eres Mujer");
+//         } else {
+//             console.log("ingresa un sexo no binario");
+            
+//         }
+// } else {
+//        console.log("Menor de edad");
+// }
+
+// console.log(sexo);
+
+// Solicita una nota (de 0 a 10) e indica si es "Insuficiente", "Suficiente", "Bien", "Notable" o "Sobresaliente":
+
+// Rango 0 a 5 = "Insuficiente", mayor que 5 a 6 = "Suficiente", mayor que 6 a 7 = "Bien"
+// mayor que 7 a 9 = "Notable" mayor que 9 = "Sobresaliente"
+
+
+// calcular el descunto segun cantidad de la compra; el usuario debe ingresar la cantidad del producto a comprar y el precio del producto es 500, si lantidad es 10 a 20 hacer descuento del 10% mayor a 20 hacer descuento del 20%, mostrar cantidad de productos, precio total, descunto y valor a pagar
+
+    // let precio = 500
+    // let descuento = 0
+    // let cantidad = parseInt(prompt("Ingrese la cantidad de productos"))
+
+    // if (cantidad >= 1 ) {
+    //     if (cantidad >= 10 && cantidad <= 20 ) {
+    //         console.log(`Cantidad: ${cantidad}, Precio total: ${cantidad * precio}, descuento del 10% : ${(cantidad * precio) * 0.1 }, total a pagar: ${(cantidad * precio) * .9}`);
+            
+    //     } else if (cantidad <= 9) {
+    //         console.log(`Cantidad: ${cantidad}, Precio total: ${cantidad * precio}, No tiene descuento 1, total a pagar: ${cantidad * precio}`);
+    //     }  else {
+    //             console.log(`Cantidad: ${cantidad}, Precio total: ${cantidad * precio}, descuento del 20% : ${(cantidad * precio) * 0.2 }, total a pagar: ${(cantidad * precio) * .8}`);
+    //     }
+    // } else {
+    //     console.log("Ingresa una cantidad igual o mayor a 1");
+    // }
+
+
+
+// el usuario debe ingresar una cantidad para ser retirada del cajero, los valores deben ser múltiplos de 10000, debe advertir si el valor es mayor a la cantidad disponible, si el valor no es valido y debe mostrar el saldo final.
+
+// let saldo = 600000 
+// let retiro = parseInt(prompt("Ingrese monto del retiro"))
+
+// if ((retiro <= 600000) && retiro >= 10000 ) {
+//     console.log(retiro % 10000);
+    
+// } else {
+//     console.log("Saldo insuficiente")
+// }
+
+
+
+
+
+
+
+
+
+
+// -------- Cambio de color ---------
+let cambioColor = document.getElementById("casco")
+
+let botones = document.querySelectorAll(".btn")
+
+botones.forEach(element => {
+    element.addEventListener('click', (evento)=> {
+        let valor = evento.target.innerText
+        // console.log(evento.target.innerText);
+        if (valor == "Naranja") {
+            cambioColor.style.color = "#FFCA2C"
+        } else if(valor == "Celeste" ) {
+            cambioColor.style.color = "#0DCAF0"
+        } else {
+            cambioColor.style.color = "#157347"
+        }
+    })
+});
+
+
+let color = document.getElementById("R")
+
+color.addEventListener('input', (evento)=>{
+    console.log(evento.target.value);
+    cambioColor.style.color = evento.target.value
+}
+)
