@@ -315,11 +315,11 @@ console.log(array[3].idiomas[1]);
 console.log("+++++++++++++++++++++++++++++++++{{{{{{{{{{{{{{++++++++++++++++++");
 
 let arraysAnidads = [[2, 4, 5, 6], [8, 5, 6], [10, 20, 7 ]]
-
+let suma = 0
 for (let i = 0; i < arraysAnidads.length; i++) {
     const element = arraysAnidads[i];
     // console.log(element);
-
+    
     // element = [2, 4, 5, 6] // cuando i = 0
     // element = [8, 5, 6] // cuando i = 1
     // element = [10, 20, 7] // cuando i = 2
@@ -327,11 +327,24 @@ for (let i = 0; i < arraysAnidads.length; i++) {
     for (let i = 0; i < element.length; i++) {
         const elemento = element[i];
         console.log(elemento);
-        
+        suma += elemento
         // elemento = element[0] // = 2
         // elemento = element[1] // = 4
         // elemento = element[2] // = 5
         // elemento = element[3] // = 6
+    console.log(`segundo for ${suma}`);
+
     }
     
 }
+console.log("-----------------------------------------------------------------------");
+
+// console.log(suma);
+// suma = 20
+// console.log(suma);
+array = [2, true, "Carlos", {nombre: "Juan", apellido:"Perez", edad: 35, idiomas:["ingles", "español"]}]
+array[3].nombre = "Fuancho"
+// console.log(array[3]);
+
+delete array[3].apellido
+console.log(array[3]);
