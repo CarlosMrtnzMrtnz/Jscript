@@ -237,29 +237,101 @@ console.log(text[text.length-1]);
 
 
 // -------- Cambio de color ---------
-let cambioColor = document.getElementById("casco")
+// let cambioColor = document.getElementById("casco")
 
-let botones = document.querySelectorAll(".btn")
+// let botones = document.querySelectorAll(".btn")
 
-botones.forEach(element => {
-    element.addEventListener('click', (evento)=> {
-        let valor = evento.target.innerText
-        // console.log(evento.target.innerText);
-        if (valor == "Naranja") {
-            cambioColor.style.color = "#FFCA2C"
-        } else if(valor == "Celeste" ) {
-            cambioColor.style.color = "#0DCAF0"
-        } else {
-            cambioColor.style.color = "#157347"
-        }
-    })
-});
+// botones.forEach(element => {
+//     element.addEventListener('click', (evento)=> {
+//         let valor = evento.target.innerText
+//         // console.log(evento.target.innerText);
+//         if (valor == "Naranja") {
+//             cambioColor.style.color = "#FFCA2C"
+//         } else if(valor == "Celeste" ) {
+//             cambioColor.style.color = "#0DCAF0"
+//         } else {
+//             cambioColor.style.color = "#157347"
+//         }
+//     })
+// });
 
 
-let color = document.getElementById("R")
+// let color = document.getElementById("R")
 
-color.addEventListener('input', (evento)=>{
-    console.log(evento.target.value);
-    cambioColor.style.color = evento.target.value
+// color.addEventListener('input', (evento)=>{
+//     console.log(evento.target.value);
+//     cambioColor.style.color = evento.target.value
+// }
+// )
+
+
+// let array = []
+// let persona = {nombre: "Juan", apellido: "Cardenas"}
+// array.push(1, 2) // arega al final del array
+// array.push("carlos") 
+// array.unshift(true) //agrega al inicio del array
+// array.pop() // elimina al final del array   
+// array.shift() // elimina al inicio del array
+
+// array.push(persona)
+// array.push({nombre: "Daniel", apellido: "Rativa"})
+
+// array.splice(2, 0, "Carlos")
+
+
+// console.log(array[3].apellido)
+//  array = [
+// {nombre: "Hamburgruesa", precio: 100},
+// {nombre: "Pizza", precio: 200},
+// {nombre: "perro", precio: 300}
+// ]
+// for (let I = 0; I < array.length; I++) {
+//     const element = array[I];
+//     console.log(element.nombre);
+    
+//     if (element.precio == 200) {
+//         console.log(element.precio);
+//     }
+    
+// }
+
+
+
+//   
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+let array = [2, true, "Carlos", {nombre: "Juan", apellido:"Perez", edad: 35, idiomas:["ingles", "español"]}]
+
+
+console.log(array[0]);
+console.log(array[1]);
+console.log(array[2]);
+console.log(array[3]);
+console.log(array[3].apellido);
+console.log(array[3]["apellido"]);
+console.log(array[3].idiomas);
+console.log(array[3].idiomas[1]);
+
+console.log("+++++++++++++++++++++++++++++++++{{{{{{{{{{{{{{++++++++++++++++++");
+
+let arraysAnidads = [[2, 4, 5, 6], [8, 5, 6], [10, 20, 7 ]]
+
+for (let i = 0; i < arraysAnidads.length; i++) {
+    const element = arraysAnidads[i];
+    // console.log(element);
+
+    // element = [2, 4, 5, 6] // cuando i = 0
+    // element = [8, 5, 6] // cuando i = 1
+    // element = [10, 20, 7] // cuando i = 2
+
+    for (let i = 0; i < element.length; i++) {
+        const elemento = element[i];
+        console.log(elemento);
+        
+        // elemento = element[0] // = 2
+        // elemento = element[1] // = 4
+        // elemento = element[2] // = 5
+        // elemento = element[3] // = 6
+    }
+    
 }
-)
