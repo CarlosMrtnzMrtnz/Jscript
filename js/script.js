@@ -342,9 +342,77 @@ console.log("-------------------------------------------------------------------
 // console.log(suma);
 // suma = 20
 // console.log(suma);
-array = [2, true, "Carlos", {nombre: "Juan", apellido:"Perez", edad: 35, idiomas:["ingles", "español"]}]
-array[3].nombre = "Fuancho"
+// array = [2, true, "Carlos", {nombre: "Juan", apellido:"Perez", edad: 35, idiomas:["ingles", "español"]}]
+// array[3].nombre = "Fuancho"
+// // console.log(array[3]);
+
+// delete array[3].apellido
 // console.log(array[3]);
 
-delete array[3].apellido
-console.log(array[3]);
+
+const productos = [ 
+    {nombre: "Televisor", precio: 300},
+        {nombre: "Celular", precio: 200},
+        {nombre: "Laptop", precio: 1000},
+        {nombre: "Tablet", precio: 150} 
+    ];
+
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element.precio > 200 ) {
+            element.precio *= 0.9
+        }
+    }
+
+
+    //Tienes una lista de usuarios y necesitas filtrar aquellos que están activos.
+	const usuarios = [ 
+	    {nombre: "Laura", activo: true},
+	    {nombre: "Pedro", activo: false}, 
+	    {nombre: "Marta", activo: true},
+	    {nombre: "Jorge", activo: false}
+];
+        let userActivos = []
+
+	    for (let i = 0; i < usuarios.length; i++) {
+            const element = usuarios[i];
+            if (element.activo == true) {
+                userActivos.unshift(element)
+            }
+        }
+
+        console.log(userActivos);
+        
+
+//•	Dado un array de usuarios que contiene su nombre, edad y estado (activo o inactivo), debemos filtrar los usuarios que están activos y luego calcular el promedio de edad de esos usuarios.
+console.log("-----------------------------------------------------------------------");
+
+const usuarios2 = [
+   {nombre: "Laura", edad: 30, activo: true},
+   {nombre: "Pedro", edad: 25, activo: false},
+   {nombre: "Marta", edad: 28, activo: true},
+   {nombre: "Jorge", edad: 35, activo: false},
+   {nombre: "Ana", edad: 40, activo: true} 
+  ];
+
+  let arrayActivos = []
+  let sumaEdades = 0
+for (let i = 0; i < usuarios2.length; i++) {
+    const element = usuarios2[i];
+        if (element.activo == true) {
+            arrayActivos.push(element)
+        }
+
+        for (let i = 0; i < arrayActivos.length; i++) {
+            const element = arrayActivos[i];
+                sumaEdades += element.edad
+                console.log(element.edad);
+                
+        }
+
+}
+
+// console.log(arrayActivos);
+console.log(sumaEdades );
+console.log(sumaEdades / arrayActivos.length);
