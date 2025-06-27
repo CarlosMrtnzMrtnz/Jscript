@@ -527,7 +527,7 @@ let x = JSON.parse(covertir)
 
 console.log(`${x}`);
 
-console.log("´´´´´´");
+console.log("+++++++++++++++++++++++++++++++++++++++++");
 
 console.log(descuentos(x));
 
