@@ -404,6 +404,10 @@ for (let i = 0; i < usuarios2.length; i++) {
             arrayActivos.push(element)
         }
 
+
+
+}
+
         for (let i = 0; i < arrayActivos.length; i++) {
             const element = arrayActivos[i];
                 sumaEdades += element.edad
@@ -411,8 +415,120 @@ for (let i = 0; i < usuarios2.length; i++) {
                 
         }
 
-}
-
-// console.log(arrayActivos);
+console.log(arrayActivos);
 console.log(sumaEdades );
 console.log(sumaEdades / arrayActivos.length);
+
+
+// Identificar si un objeto tiene o no una propiedad, saber todos las propiedades y valores
+
+let user = {nombre: "Laura", edad: 30, activo: true, idiomas: ["ingles", "español"]}
+
+console.log(user.hasOwnProperty("apellido")); // hasOwnProperty() recibe un valor y entrega un booleano si esta o no la propiedad
+
+console.log(Object.keys(user)); // entrega todas las propiedades del objeto en una array
+console.log(Object.values(user)); // entrega todas las valores de las propiedades en un array
+console.log(Object.entries(user)); // entrega propiedad y valor en una array independiente para cada propiedad
+
+user.apellido = "Martinez" // de esta manera se agrega una propiedad si no existe o edita si ya existe
+
+
+
+// function consola () {
+//     let hola = "hello worl"
+//     if (hola =="hello world") {
+//         return hola
+//     }
+//     return console.log("holita");
+
+// }
+
+// console.log(consola());
+// console.log(consola());
+
+// let pron = parseInt(prompt("ingrese numero a sumar con 10"))
+// let pron2 = parseInt(prompt("ingrese numero a sumar con 10"))
+// // suma = (a, b) => a + b arrow funtion en una linea
+// const sumaSum = (a, b) => {
+//     a + b
+//  }
+// console.log(sumaSum(pron, pron2));
+// console.log(suma(pron));
+
+// console.log(suma(20));
+// console.log(suma(10));
+// console.log(suma(80));
+
+
+// const usuarios2 = [
+//    {nombre: "Laura", edad: 30, activo: true},
+//    {nombre: "Pedro", edad: 25, activo: false},
+//    {nombre: "Marta", edad: 28, activo: true},
+//    {nombre: "Jorge", edad: 35, activo: false},
+//    {nombre: "Ana", edad: 40, activo: true} 
+//   ];
+
+//   let arrayActivos = []
+//   let sumaEdades = 0
+// for (let i = 0; i < usuarios2.length; i++) {
+//     const element = usuarios2[i];
+//         if (element.activo == true) {
+//             arrayActivos.push(element)
+//         }
+
+
+
+// }
+
+// migrar ejercio a una funcion 
+
+const descuentos = (array) => {
+    let arrayActivos = [] 
+    
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+            if (element.activo == true) {
+                arrayActivos.push(element) 
+            }
+    }
+    return arrayActivos
+}
+// Array 1
+const usuariosA = [
+   {nombre: "Sofía", edad: 22, activo: true},
+   {nombre: "Diego", edad: 31, activo: false},
+   {nombre: "Valentina", edad: 27, activo: true},
+   {nombre: "Carlos", edad: 45, activo: false},
+   {nombre: "Gabriela", edad: 38, activo: true}
+];
+
+// Array 2
+const usuariosB = [
+   {nombre: "Andrés", edad: 29, activo: true},
+   {nombre: "Patricia", edad: 33, activo: false},
+   {nombre: "Sebastián", edad: 24, activo: true},
+   {nombre: "Mariana", edad: 41, activo: false},
+   {nombre: "Ricardo", edad: 36, activo: true}
+];
+
+// Array 3
+const usuariosC = [
+   {nombre: "Camila", edad: 26, activo: true},
+   {nombre: "Fernando", edad: 39, activo: false},
+   {nombre: "Lucía", edad: 30, activo: true},
+   {nombre: "Oscar", edad: 34, activo: false},
+   {nombre: "Paula", edad: 42, activo: true}
+];
+console.log(descuentos(usuariosA), descuentos(usuariosB), descuentos(usuariosC));
+let covertir = JSON.stringify(usuariosC)
+console.log(` ${covertir}`);
+let x = JSON.parse(covertir)
+
+console.log(`${x}`);
+
+console.log("´´´´´´");
+
+console.log(descuentos(x));
+
+
