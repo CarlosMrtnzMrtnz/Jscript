@@ -314,7 +314,11 @@ console.log(array[3].idiomas[1]);
 
 console.log("+++++++++++++++++++++++++++++++++{{{{{{{{{{{{{{++++++++++++++++++");
 
-let arraysAnidads = [[2, 4, 5, 6], [8, 5, 6], [10, 20, 7 ]]
+let arraysAnidads = [
+                    [2, 4, 5],
+                    [8, 5, 6],
+                    [10,20,7]
+                ]
 let suma = 0
 for (let i = 0; i < arraysAnidads.length; i++) {
     const element = arraysAnidads[i];
@@ -532,3 +536,35 @@ console.log("+++++++++++++++++++++++++++++++++++++++++");
 console.log(descuentos(x));
 
 
+// ejercicio de matrix de "*"
+
+
+const matrix = (columnas, filas)=> {
+    let cols = ""
+    let rows = ""
+
+    for (let i = 0; i < columnas; i++) {
+    cols += "*"
+    }
+    for (let i = 0; i < filas; i++) {
+        rows += cols + "\n"
+    }
+    console.log(rows);
+}
+
+// let columnas = parseInt(prompt("numeroo de columnas"))
+// let filas = parseInt(prompt("numeroo de filas"))
+// matrix(columnas,filas)
+
+const mtx = (cols, rows) => {
+    let array = []
+    for (let i= 0; i< cols; i++){
+        let dato = parseInt(prompt("ingresa dato del array"))
+        array.push(dato)
+    }
+
+    console.log(array);
+    
+}
+// let columns = parseInt(prompt("ingrese las columnas"))
+mtx(columns)
