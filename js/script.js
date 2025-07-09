@@ -42,7 +42,6 @@ console.log(typeof nombre)
 
 let numOne = 4
 let numTwo = "4"
-
 const sumaTotal = numOne.toString() + parseInt(numTwo)
 
 console.log(sumaTotal);
@@ -71,7 +70,7 @@ let Multiplicacion = numOne * numTwo
 console.log(Multiplicacion)
 
 
-// ---Division ---
+// --- Division ---
 
 let Division = numOne / numTwo
 console.log(Division);
@@ -132,7 +131,7 @@ console.log(numOne > numTwo);
 console.log(numOne <= 5);
 console.log(numOne >= 5);
 
-if ((true && true ) || (false && true)   ) {
+if ( (true && true ) || (false && true)  ) {
     console.log("probando operador && 'IF'");
     
 } else {
@@ -145,6 +144,9 @@ if ( (false || true) && true) {
 } else {
         console.log("probando operador || 'ELSE '");
 }
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
 let text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum reiciendis ipsam similique quo itaque dignissimos distinctio, facere vitae, temporibus vero eveniet laboriosam esse quas nemo voluptates aut labore id delectus.sdfghjklñ{asdftgyjmhtuikjhgu7uuh"
 console.log("ALPHABET".toLowerCase())
 console.log("alpaha".toUpperCase())
@@ -152,6 +154,11 @@ console.log("alpaha".toUpperCase())
 console.log(text.length-1)
 console.log(text[text.length-1]);
 
+text = text.replace(/\s+/g,"") // *********************** *****************************
+console.log(text);
+
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 // let ingresoNombre = prompt("Ingresa tu nombre")
 // let ingresoApellido = prompt("Ingresa tu Apellido")
@@ -355,9 +362,9 @@ console.log("-------------------------------------------------------------------
 
 
 const productos = [ 
-    {nombre: "Televisor", precio: 300},
+        {nombre: "Televisor", precio: 300},
         {nombre: "Celular", precio: 200},
-        {nombre: "Laptop", precio: 1000},
+        {nombre: "Laptop", precio: 1000, cantidad: 20},
         {nombre: "Tablet", precio: 150} 
     ];
 
@@ -567,4 +574,33 @@ const mtx = (cols, rows) => {
     
 }
 // let columns = parseInt(prompt("ingrese las columnas"))
-mtx(columns)
+// mtx(columns) 
+
+
+for (let i = 0; i < productos.length; i++) {
+    const element = productos[i];
+    
+    if (!element.hasOwnProperty("cantidad")) {
+        element.cantidad = 0
+        console.log(element);   
+    }
+    
+}
+
+console.log(productos);
+
+const modifObject = (arr)=> {
+
+    for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    
+        if (!element.hasOwnProperty("cantidad")) {
+            element.cantidad = 0
+            console.log(element);   
+        }
+    }
+    return arr
+}
+
+
+console.log(modifObject(usuariosC));
