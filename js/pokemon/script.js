@@ -10,18 +10,18 @@ const verPokemones = async (array)=>{
             // urlsPokemons.push(pokemon.url)
             let response = await fetch(pokemon.url)
             let convert = await response.json()
-            console.log(convert);
+            // console.log(convert);
             caja.innerHTML += `
-            <div class="card">
+            <div class="card ">
                 <div class="card-border-top">
                 </div>
                 <div class="img">
-                    <img class="imge " src="" alt="">
+                    <img class="imge " src="${convert.sprites.other.dream_world.front_default}" alt="">
                 </div>
 
                 <div class="">
-                    <span> Person</span>
-                    <p class="job"> Job Title</p>
+                    <span>${convert.name}</span>
+                    <p class="job">${convert}</p>
 
                 </div>
                 <button> Click </button>
@@ -51,10 +51,17 @@ const pokemon = async (urlApi) => {
 
 }
 
-
-
 pokemon(url)
 
 
 
 
+
+
+let botonX = document.getElementById("x")
+
+botonX.addEventListener("click", (evento) => {
+    
+    pokemon(url)
+
+})
